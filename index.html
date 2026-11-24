@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-BR" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pet shop e adoção | Pata &amp; Afeto</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/preferencias.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<header class="barra">
+  <div class="container barra-interna">
+    <a class="marca" href="index.html"><span aria-hidden="true">🐾</span> Pata &amp; Afeto</a>
+    <nav aria-label="Navegação principal">
+      <a href="index.html#servicos">Serviços</a>
+      <a href="index.html#adocao">Adoção</a>
+      <a href="index.html#contato">Contato</a>
+      <a href="login.html">Entrar</a>
+    </nav>
+    <details class="preferencias">
+      <summary>Acessibilidade</summary>
+      <div class="painel">
+        <button type="button" class="botao secundario" id="tema" aria-pressed="false">Modo escuro</button>
+        <fieldset>
+          <legend>Tamanho da fonte</legend>
+          <button type="button" class="botao secundario" data-fonte="normal" aria-pressed="true">Padrão</button>
+          <button type="button" class="botao secundario" data-fonte="grande" aria-pressed="false">Maior</button>
+          <button type="button" class="botao secundario" data-fonte="extra" aria-pressed="false">Extra</button>
+        </fieldset>
+      </div>
+    </details>
+  </div>
+</header>
+<main id="conteudo" tabindex="-1">
+  <section class="hero">
+    <div class="container">
+      <div class="row align-items-center g-4 g-lg-5">
+        <div class="col-lg-6">
+          <h1>Cuidado para seu pet.<br>Um lar para quem espera.</h1>
+          <p class="introducao">Conheça nossos serviços de banho, vacinação e adestramento ou encontre um cãozinho de pequeno porte para adotar.</p>
+          <div class="acoes">
+            <a class="botao" href="#servicos">Conhecer serviços</a>
+            <a class="botao secundario" href="#adocao">Ver adoção</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div id="galeria" class="carousel slide" role="region" aria-label="Galeria de cães" data-bs-interval="false" data-bs-touch="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="img/hero.jpg" alt="Beagle ao ar livre"></div>
+              <div class="carousel-item"><img src="img/nina.jpg" alt="Cão do perfil de Nina"></div>
+              <div class="carousel-item"><img src="img/tobias.jpg" alt="Cão do perfil de Tobias"></div>
+            </div>
+            <div class="galeria-controles">
+              <button class="botao secundario" type="button" data-bs-target="#galeria" data-bs-slide="prev" aria-label="Foto anterior">←</button>
+              <span id="galeria-status" role="status">Foto 1 de 3</span>
+              <button class="botao secundario" type="button" data-bs-target="#galeria" data-bs-slide="next" aria-label="Próxima foto">→</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="servicos" class="secao container" aria-labelledby="catalogo">
+    <h2 id="catalogo">Serviços e adoção</h2>
+    <label for="pesquisa">Pesquisar no catálogo</label>
+    <input id="pesquisa" type="search" placeholder="Ex.: banho ou Nina" aria-describedby="busca-ajuda">
+    <p id="busca-ajuda">A busca filtra os itens das duas abas.</p>
+    <p class="visually-hidden" id="resultado" role="status"></p>
+    <div class="nav nav-tabs" id="abas" role="tablist" aria-label="Categorias do catálogo">
+      <button class="nav-link active" id="aba-servicos" data-bs-toggle="tab" data-bs-target="#lista-servicos" type="button" role="tab" aria-controls="lista-servicos" aria-selected="true">Serviços</button>
+      <button class="nav-link" id="aba-adocao" data-bs-toggle="tab" data-bs-target="#lista-adocao" type="button" role="tab" aria-controls="lista-adocao" aria-selected="false" tabindex="-1">Cães para adoção</button>
+    </div>
+    <div class="tab-content">
+      <section class="tab-pane show active" id="lista-servicos" role="tabpanel" aria-labelledby="aba-servicos" tabindex="0">
+        <div class="row g-3">
+          <article class="col-md-4" data-item>
+            <div class="cartao h-100"><span class="icone" aria-hidden="true">✦</span><h3>Banho</h3><p>Higiene e cuidado com a pelagem, respeitando o ritmo de cada cachorro.</p><a href="#contato" data-assunto="Banho">Consultar banho</a></div>
+          </article>
+          <article class="col-md-4" data-item>
+            <div class="cartao h-100"><span class="icone" aria-hidden="true">✚</span><h3>Vacinação</h3><p>Orientação sobre o calendário de vacinas e atendimento com profissional veterinário.</p><a href="#contato" data-assunto="Vacinação">Consultar vacinação</a></div>
+          </article>
+          <article class="col-md-4" data-item>
+            <div class="cartao h-100"><span class="icone" aria-hidden="true">✿</span><h3>Adestramento</h3><p>Atividades com reforço positivo para ajudar no passeio e na convivência em casa.</p><a href="#contato" data-assunto="Adestramento">Consultar adestramento</a></div>
+          </article>
+        </div>
+        <p class="vazio" hidden>Nenhum serviço encontrado nesta aba.</p>
+      </section>
+      <section class="tab-pane" id="lista-adocao" role="tabpanel" aria-labelledby="aba-adocao" tabindex="0">
+        <p>Perfis ilustrativos criados para o projeto acadêmico.</p>
+        <div class="row g-3">
+          <article class="col-md-6" data-item><div class="cartao perfil h-100"><img src="img/nina.jpg" alt="Cão retratado no perfil ilustrativo de Nina" loading="lazy"><div><h3>Nina</h3><p>Porte pequeno · 2 anos</p><p>Curiosa e companheira, gosta de brincar e passear.</p><a href="#contato" data-assunto="Adoção de Nina">Tenho interesse em Nina</a></div></div></article>
+          <article class="col-md-6" data-item><div class="cartao perfil h-100"><img src="img/tobias.jpg" alt="Cão retratado no perfil ilustrativo de Tobias" loading="lazy"><div><h3>Tobias</h3><p>Porte pequeno · 4 anos</p><p>Tranquilo, gosta de companhia e de passeios curtos.</p><a href="#contato" data-assunto="Adoção de Tobias">Tenho interesse em Tobias</a></div></div></article>
+        </div>
+        <p class="vazio" hidden>Nenhum cão encontrado nesta aba.</p>
+      </section>
+    </div>
+  </section>
+  <section id="adocao" class="faixa secao">
+    <div class="container">
+      <h2>Como funciona a adoção</h2>
+      <div class="row g-3">
+        <article class="col-md-4"><div class="cartao h-100"><h3>Conheça o cão</h3><p>Leia o perfil e considere se a rotina e o espaço da sua casa combinam com ele.</p></div></article>
+        <article class="col-md-4"><div class="cartao h-100"><h3>Converse com a equipe</h3><p>Use o formulário para demonstrar como funciona uma manifestação de interesse.</p></div></article>
+        <article class="col-md-4"><div class="cartao h-100"><h3>Prepare o lar</h3><p>Planeje alimentação, consultas, passeios e um espaço seguro para a adaptação.</p></div></article>
+      </div>
+      <a class="botao mt-4" href="#servicos" id="abrir-adocao">Ver cães no catálogo</a>
+    </div>
+  </section>
+  <section id="contato" class="secao container" aria-labelledby="titulo-contato">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <h2 id="titulo-contato">Fale com a gente</h2>
+        <p>Escolha um assunto para simular uma consulta sobre serviços ou adoção.</p>
+        <p id="contato-ajuda">Formulário demonstrativo. Use dados fictícios. Todos os campos são obrigatórios.</p>
+      </div>
+      <div class="col-lg-7">
+        <form class="cartao formulario" id="form-contato" aria-describedby="contato-ajuda">
+          <label for="nome">Nome</label><input id="nome" autocomplete="off" required maxlength="100">
+          <label for="email">E-mail</label><input id="email" type="email" autocomplete="off" required maxlength="150">
+          <label for="assunto">Assunto</label>
+          <select id="assunto" required>
+            <option value="">Selecione um assunto</option>
+            <option>Banho</option><option>Vacinação</option><option>Adestramento</option>
+            <option>Adoção de Nina</option><option>Adoção de Tobias</option><option>Outro</option>
+          </select>
+          <label for="mensagem">Mensagem</label><textarea id="mensagem" rows="4" required minlength="10" maxlength="800" aria-describedby="mensagem-ajuda"></textarea>
+          <p id="mensagem-ajuda">Digite entre 10 e 800 caracteres.</p>
+          <button type="submit" class="botao">Simular envio</button>
+          <p class="retorno" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="rodape">
+  <div class="container">
+    <a class="marca" href="index.html">Pata &amp; Afeto</a>
+    <p>Projeto acadêmico de Desenvolvimento de Interfaces · CEUB</p>
+    <a href="index.html#contato">Contato</a> · <a href="https://github.com/luisa99-web/PROJ_PETSHOP">Código no GitHub</a>
+  </div>
+</footer>
+</body>
+</html>
